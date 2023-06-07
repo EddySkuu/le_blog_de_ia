@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
@@ -20,7 +21,37 @@ class AppFixtures extends Fixture
     }
     public function load(ObjectManager $manager): void
     {
-        // for ();{};
+        //  Users
+
+        $users = [];
+
+        $admin = new User();
+        $admin->setFirstName('admin')
+            ->setLastName('admin')
+            ->setUsername(null)
+            ->setEmail('admin@glog-ia.com')
+            ->setRoles(['ROLE_USER', 'ROLE_ADMIN'])
+            ->setPassword('password')
+            ->setPlainPassword('password');
+        
+        $users[] = $admin;
+        $manager->persist($admin);
+
+        for ($i=0; $i < 10; $i++) { 
+            $user = new User();
+            $user->setFirstName($this->faker->firstName())
+                ->setLastName($this->faker->lastName())
+                ->setUsername(mt_rand(0, 1)===1 ? $this->faker->userName() : null)
+                ->setEmail($this->faker->email())
+                ->setRoles(['ROLE_USER'])
+                ->setPassword('password')
+                ->setPlainPassword('password');
+
+            $users[] = $user;
+            $manager->persist($user);
+
+        }
+
         $manager->flush();
     }
 }
