@@ -31,3 +31,5 @@ Les tables :
 
 
 Application créer sous projet Symfony
+
+Installation de faker PHP pour créer des fausses infos et fixtures bundle
