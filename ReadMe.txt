@@ -37,3 +37,5 @@ Installation de faker PHP pour créer des fausses infos et fixtures bundle
 - Mise en place d'un User avec make:user et donc modification du security.yaml en déclarant un provider qui permet de récupérer un user dans la BDD en fonction d'une propriété -> ici l'email qui sera l'identifiant
 
 - Mise en place d'un User dans les fixtures, on lui set un plainPassword que l'on encode dans un EntityListener
+
+- 

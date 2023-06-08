@@ -23,4 +23,10 @@ class SecurityController extends AbstractController
     {
         // Nothing to do here
     }
+
+    #[Route('/inscription', 'security.registration', methods: ['GET', 'POST'])]
+    public function registration(): Response
+    {
+        return $this->render(('security/registration.html.twig'));
+    }
 }
