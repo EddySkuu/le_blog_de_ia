@@ -5,5 +5,26 @@
 {% endblock %}
 
 {% block container %}
-   
+    <h2>Inscription</h2>
+    <form action="{{ path('handle_registration') }}" method="POST">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <label for="genre">Genre :</label>
+        <select id="genre" name="genre" required>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+        </select><br><br>
+
+        <label for="dateNaissance">Date de naissance :</label>
+        <input type="date" id="dateNaissance" name="dateNaissance" required><br><br>
+
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <input type="submit" value="S'inscrire">
+    </form>
 {% endblock %}
