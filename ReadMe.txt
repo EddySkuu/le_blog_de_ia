@@ -38,4 +38,5 @@ Installation de faker PHP pour créer des fausses infos et fixtures bundle
 
 - Mise en place d'un User dans les fixtures, on lui set un plainPassword que l'on encode dans un EntityListener
 
-- 
+- mise en place de slug dans Post.php (https://developer.mozilla.org/fr/docs/Glossary/Slug) et repository du cocur slugify : https://github.com/cocur/slugify
+    Un Slug est la partie d'identification unique d'une adresse Web, généralement à la fin de l'URL. Dans le contexte de MDN, c'est la partie de l'URL qui suit "<locale>/docs/".
