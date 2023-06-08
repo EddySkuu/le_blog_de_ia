@@ -55,6 +55,7 @@ class RegistrationType extends AbstractType
                     'minlenght' => '2',
                     'maxlenght' => '50',
                 ],
+                'required' => false,
                 'label' => 'Pseudo (Facultatif)',
                 'label_attr' => [
                     'class' => 'form-label'
@@ -65,13 +66,13 @@ class RegistrationType extends AbstractType
             ])
             ->add('email', EmailType::class, [
                 'attr' => [
-                    'class' => 'form-conrol',
+                    'class' => 'form-control',
                     'minlength' => '2',
                     'maxlength' => '180',
                 ],
                 'label' => 'Adresse email',
                 'label_attr' => [
-                    'class' => 'form-label'
+                    'class' => 'form-label mt-4'
                 ],
                 'constraints' => [
                     new Assert\NotBlank(),
@@ -90,7 +91,7 @@ class RegistrationType extends AbstractType
                         'class' => 'form-label mt-4'
                     ]
                 ],
-                'second_option' => [
+                'second_options' => [
                     'attr' => [
                         'class' => 'form-control'
                     ],
@@ -103,8 +104,9 @@ class RegistrationType extends AbstractType
             ])
             ->add('submit', SubmitType::class,[
                 'attr' => [
-                    'class' => 'btn btn-primary'
-                ]
+                    'class' => 'btn btn-primary mt-4'
+                ],
+                'label' => 'Valider',
             ])
         ;
     }

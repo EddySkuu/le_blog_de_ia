@@ -45,7 +45,6 @@ class UserPasswordType extends AbstractType
                     'calss' => 'form-label mt-4'
                 ],
                 'constraints' => [new Assert\NotBlank()]
-
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => [
