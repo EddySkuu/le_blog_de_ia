@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Le Blog de l'IA - Connexion
+{% endblock %}
+
+{% block container %}
+	<div class="container">
+		<h1 class="mt-4">Connexion</h1>
+		{% if error %}
+			<div class="alert alert-danger" role="alert">
+				{{ error.messageKey|trans(error.messageData, 'security') }}
+			</div>
+		{% endif %}
+
+		<form action="{{ path('security.login') }}" method="post">
+			<div class="mb-3">
+				<label for="username" class="form-label">Adresse email</label>
+				<input type="email" class="form-control" id="username" name="_username" placeholder="exemple@blog-ia.com" value="{{ last_username }}">
+				<div id="emailHelp" class="form-text">Votre email est confidentiel et ne sera pas partager</div>
+			</div>
+			<div class="mb-3">
+				<label for="password" class="form-label">Mot de passe</label>
+				<input type="password" class="form-control" id="password" name="_password" placeholder="********">
+			</div>
+			<button type="submit" class="btn btn-primary">Envoyer</button>
+		</form>
+	</div>
+
+{% endblock %}

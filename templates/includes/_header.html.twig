@@ -1,21 +1,34 @@
-<header class="my-navigation-container">
-	<nav>
-		{# <img class='logo' src="build/images/intel.png" alt=""> #}
-		<h1>Le Blog de l'IA</h1>
-		<ul>
-			<li><a href="#">Accueil</a></li>
+<header>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="{{ path('app_main') }}">Le Blog de l'IA</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="{{ path('app_main') }}">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="page_article_html.html">Articles</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="page_aPropos_html.html">À propos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="page_inscription_html.html">Inscription</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ path('security.login')}}">Connexion</a>
+					</li>
+				</ul>
 
-			<li><a href="#">Articles</a></li>
-
-			<li><a href="#">A propos</a></li>
-
-			<li><a href="#">Inscription</a></li>
-		</ul>
-		
-		<ul>
-			<li><a href="#">Connexion</a></li>
-
-			<li><a href="#">Recherche</a></li>
-		</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Recherche" aria-label="Search">
+					<button class="btn btn-primary" type="submit">Rechercher</button>
+				</form>
+			</div>
+		</div>
 	</nav>
 </header>
