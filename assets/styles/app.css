@@ -1,1 +1,45 @@
 /*# sourceMappingURL=app.css.map */
+body {
+    background-color: #dcdde1;
+  }
+
+  h2 {
+    color: #192a56;
+  }
+
+  form {
+    background-color: #f5f6fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #192a56;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+
+  input[type="submit"] {
+    background-color: #192a56;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0c1631;
+  }
