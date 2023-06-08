@@ -6,9 +6,11 @@
     <div class="container">
         <h1 class="mt-4">Modification des informations</h1>
 
+        {% for mesage in app.flashes('warning') %}
+            <div class="alert alert-warning mt-4">
+                {{ message }}
+            </div>
+        {% endfor %}
         {{ form(form)}}
-
-
-
     </div>
 {% endblock %}

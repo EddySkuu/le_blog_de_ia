@@ -55,7 +55,7 @@ class RegistrationType extends AbstractType
                     'minlenght' => '2',
                     'maxlenght' => '50',
                 ],
-                'label' => 'Pseudo Facultatif',
+                'label' => 'Pseudo (Facultatif)',
                 'label_attr' => [
                     'class' => 'form-label'
                 ],
