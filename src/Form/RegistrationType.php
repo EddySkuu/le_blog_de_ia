@@ -79,13 +79,25 @@ class RegistrationType extends AbstractType
                     new Assert\Length(['min' => 2, 'max' => 180])
                 ]
             ])
-            ->add('password', RepeatedType::class, [
+            ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'first_options' => [
+                    'attr' => [
+                        'class' => 'form-control'
+                    ],
                     'label' => 'Mot de passe',
+                    'label_attr' => [
+                        'class' => 'form-label mt-4'
+                    ]
                 ],
                 'second_option' => [
-                    'label' => 'Confirmation du mot de passe'
+                    'attr' => [
+                        'class' => 'form-control'
+                    ],
+                    'label' => 'Confirmation du mot de passe',
+                    'label_attr' => [
+                        'class' => 'form-label mt-4'
+                    ]
                 ],
                 'invalid_message' => 'Les mots de passe ne correspondent pas.'
             ])
