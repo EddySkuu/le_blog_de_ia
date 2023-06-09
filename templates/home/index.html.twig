@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Le Blog de l'IA{% endblock %}
+
+{% block container %}
+<div class="container text-center">
+    <h1>Le Blog de l'IA</h1>
+    <h2>
+        <i>N'attendez pas Terminator pour vous y intéresser !</i>
+    </h2>
+
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success mt-4">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col"></div>
+            {% for post in posts %}
+        {% include "components/_card.html.twig" with {post: post} only %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

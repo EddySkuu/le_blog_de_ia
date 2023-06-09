@@ -9,12 +9,12 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PostController extends AbstractController
 {
-    #[Route('/', name: 'post.index', methods: ['GET'])]
+    #[Route('/articles', name: 'post.index', methods: ['GET'])]
     public function post(PostRepository $postRepository): Response
     {
         $posts = $postRepository->findPublished();
 
-        return $this->render('post/index.html.twig', [
+        return $this->render('post/post.html.twig', [
             'posts' => $posts
         ]);
     }
