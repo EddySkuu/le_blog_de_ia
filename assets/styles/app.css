@@ -1,45 +1,97 @@
-/*# sourceMappingURL=app.css.map */
-body {
-    background-color: #dcdde1;
-  }
 
-  h2 {
-    color: #192a56;
-  }
 
-  form {
-    background-color: #f5f6fa;
-    padding: 20px;
-    border-radius: 5px;
+/* body {
+    background: rgb(156, 85, 85);
+  } */
+  
+   /* h2 {
+      color: #192a56;
+    }
+  
+    form {
+      background-color: #f5f6fa;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 0 auto;
+      max-width: 500px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #192a56;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+  
+    input[type="submit"] {
+      background-color: #192a56;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #0c1631;
+    } */
+  /* 
+  .my-navigation-container img.logo {
+    height: 48px;
+    border-radius: 8px;
+  }
+  
+  .my-navigation-container nav {
+    display: flex;
+    background: #073b4c;
+    width: 890px;
     margin: 0 auto;
-    max-width: 500px;
+    position: fixed;
+    top: 16px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    border-radius: 8px;
   }
-
-  label {
-    display: block;
-    margin-bottom: 10px;
-    color: #192a56;
+  
+  .my-navigation-container nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 70%;
   }
-
-  input[type="text"],
-  input[type="email"],
-  select {
+  
+  .my-navigation-container nav ul li {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
   }
-
-  input[type="submit"] {
-    background-color: #192a56;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  
+  .my-navigation-container nav a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: bold;
+    transition: all 400ms;
   }
-
-  input[type="submit"]:hover {
-    background-color: #0c1631;
+  
+  .my-navigation-container nav a:hover {
+    color: #ffd166;
   }
+  
+  @media (max-width: 900px) {
+    .my-navigation-container nav {
+      width: 90%;
+    }
+  } */
+  
+  
+  /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNzcyIsIm1hcHBpbmdzIjoiOzs7QUFBQTtJQUNJLDJCQUEyQjtBQUMvQiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zdHlsZXMvYXBwLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBsaWdodGdyYXk7XG59XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=*/
