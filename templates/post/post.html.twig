@@ -6,14 +6,13 @@
 
 {% block container %}
 
-
-    
-		<div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col"></div>
+	<h1 class="titre text-center">Liste des articles</h1>
+		<div class="article">
+            
 			    {% for post in posts %}
-            {% include "components/_card.html.twig" with {post: post} only %}
+            	{% include "components/_card.html.twig" with {post: post} only %}
 			    {% endfor %}
-            </div>
+            
 		</div>
     </div>
 	

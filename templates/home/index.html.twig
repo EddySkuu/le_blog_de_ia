@@ -4,8 +4,8 @@
 
 {% block container %}
 <div class="container text-center">
-    <h1>Le Blog de l'IA</h1>
-    <h2>
+    <h1 class="titre">Le Blog de l'IA</h1>
+    <h2 class="legend">
         <i>N'attendez pas Terminator pour vous y intéresser !</i>
     </h2>
 
@@ -15,13 +15,13 @@
         </div>
     {% endfor %}
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col"></div>
-            {% for post in posts %}
-        {% include "components/_card.html.twig" with {post: post} only %}
-            {% endfor %}
+    <div class="card text-bg-dark">
+        <img src={{ asset('build/intel.png')}} class="card-img" alt="Le Blog de l'IA">
+        <div class="card-img-overlay">
+          <h3 class="card-title"><i>Le Blog de l'IA</i></h3>
+          <p class="card-text">Bienvenue sur le blog de l'IA. Découvrez les nouveaux articles sur l'inteligence artificielle. Connectez vous ou inscrivez vous</p>
         </div>
-    </div>
+      </div>
 </div>
 
 {% endblock %}
