@@ -31,7 +31,7 @@ class UserController extends AbstractController
         }
 
         if ($this->getUser() !== $user) {
-            return $this->redirectToRoute('security.registration');
+            return $this->redirectToRoute('post.index');
         }
 
         $form = $this->createForm(UserType::class, $user);
@@ -48,7 +48,7 @@ class UserController extends AbstractController
                     'Les informations de votre compte ont bien été modifiées.'
                 );
 
-                return $this->redirectToRoute('app_main');
+                return $this->redirectToRoute('post.index');
             } else {
                 $this->addFlash(
                     'warning',

@@ -13,7 +13,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 #[UniqueEntity('slug', message: 'Ce slug existe déjà.')]
 class Post
 {
-    const STATES = ['STATE_DRAFT', 'SATATE_PUBLISH'];
+    const STATES = ['STATE_DRAFT', 'STATE_PUBLISH'];
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -52,6 +52,7 @@ class Post
         $this->createdAt = new \DateTimeImmutable();
     }
 
+    #[ORM\PrePersist]
     public function prePersist()
     {
         $this->slug = (new Slugify())->slugify($this->title);

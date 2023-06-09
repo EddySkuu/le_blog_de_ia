@@ -15,10 +15,10 @@ class Thumbnail
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
+    #[ORM\Column()]
     private ?int $id = null;
 
-    #[Vich\UploadableField(mapping: 'post_thumbnail', filNameProperty: 'imageName', size: 'iamgeSize')]
+    #[Vich\UploadableField(mapping: 'post_thumbnail', fileNameProperty: 'imageName', size: 'iamgeSize')]
     private ?File $imageFile = null;
 
     #[ORM\Column(type: 'string')]

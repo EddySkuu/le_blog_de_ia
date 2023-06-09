@@ -2,11 +2,12 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\User;
-use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use App\Entity\User;
 use Faker\Generator;
+use App\Entity\Post\Post;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class AppFixtures extends Fixture
@@ -52,6 +53,15 @@ class AppFixtures extends Fixture
             $users[] = $user;
             $manager->persist($user);
 
+        }
+
+        for ($i=0; $i < 50 ; $i++) { 
+            $post = new Post();
+            $post->setTitle($this->faker->words(4, true))
+                ->setContent($this->faker->realText(1800))
+                ->setState(mt_rand(0, 2) === 1 ? Post::STATES[0] : Post::STATES[1]);
+
+            $manager->persist($post);
         }
 
         $manager->flush();
